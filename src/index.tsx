@@ -1,5 +1,21 @@
-import * as React from 'react';
-import * as ReactDOM from 'react-dom';
-const { Provider } = require('react-redux');
-const { Router, browserHistory } = require('react-router');
-const { syncHistoryWithStore } = require('react-router-redux');
+import { createStore } from "redux";
+
+const reducer = (state: number, action : any) => {
+    if(action.type === "INC") {
+        return state + action.payload;
+    }
+    if(action.type === "DEC") {
+        return state - action.payload;
+    }
+    return state;
+};
+
+const store  = createStore(reducer, 0);
+store.subscribe(() => {
+    console.log("changed", store.getState());
+});
+
+store.dispatch({type: "INC", payload: 100});
+store.dispatch({type: "INC", payload: 10});
+store.dispatch({type: "DEC", payload: 1});
+store.dispatch({type: "DEC", payload: 101});

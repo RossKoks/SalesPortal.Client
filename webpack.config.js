@@ -5,7 +5,7 @@ const path = require('path');
 module.exports = {
     context: path.join(__dirname, "src"),
     devtool: debug ? "source-map" : null,
-    entry: "./js/index.tsx",
+    entry: "./index.tsx",
     resolve: {
         extensions: ["", ".webpack.js", ".web.js", ".ts", ".tsx", ".js"]
     },

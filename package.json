@@ -1,0 +1,19 @@
+{
+  "name": "sales-portal-client",
+  "version": "0.0.1",
+  "description": "",
+  "main": "webpack.config.js",
+  "scripts": {
+    "test": "karma start --single-run --browsers PhantomJS"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RossKoks/SalesPortal.Client.git"
+  },
+  "author": "dominikus1993",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/RossKoks/SalesPortal.Client/issues"
+  },
+  "homepage": "https://github.com/RossKoks/SalesPortal.Client#readme"
+}

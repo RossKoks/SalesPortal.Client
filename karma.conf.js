@@ -7,10 +7,10 @@ module.exports = (config) => {
         singleRun: false,
         frameworks: ["mocha"],
         files: [
-            "test/**/*.ts"
+            "src/**/*.test.tsx"
         ],
         preprocessors: {
-            "test/**/*.ts": ['webpack']
+            "src/**/*.test.tsx": ['webpack']
         },
         webpack: {
             module: webpackConfig.module,

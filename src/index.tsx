@@ -1,11 +1,11 @@
 import { combineReducers, createStore } from "redux";
-import {AppModel} from "./global/model";
+import {userReducer} from "./user/reducers";
 
-const reducer = (state: AppModel, action : any) => {
-    return state;
-};
+const reducers = combineReducers({
+   user: userReducer
+});
 
-const store  = createStore(reducer, 0);
+const store  = createStore(reducers, {});
 store.subscribe(() => {
     console.log("changed", store.getState());
 });

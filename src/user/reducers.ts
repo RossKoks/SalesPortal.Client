@@ -1,5 +1,5 @@
 import {AppModel} from "../global/model";
 
-export function userReducer(state: AppModel, action: {type: string, payload: AppModel}){
+export function userReducer(state: AppModel = {}, action: any){
     return state;
 }

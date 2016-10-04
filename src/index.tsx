@@ -1,12 +1,7 @@
-import { createStore } from "redux";
+import { combineReducers, createStore } from "redux";
+import {AppModel} from "./global/model";
 
-const reducer = (state: number, action : any) => {
-    if(action.type === "INC") {
-        return state + action.payload;
-    }
-    if(action.type === "DEC") {
-        return state - action.payload;
-    }
+const reducer = (state: AppModel, action : any) => {
     return state;
 };
 

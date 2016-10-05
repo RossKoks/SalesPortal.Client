@@ -6,6 +6,7 @@
         "bluebird": "registry:dt/bluebird#3.0.0+20160907110115",
         "chai": "registry:dt/chai#3.4.0+20160601211834",
         "core-js": "registry:dt/core-js#0.0.0+20160914114559",
+        "enzyme": "registry:dt/enzyme#2.4.1+20161004164857",
         "express": "registry:dt/express#4.0.0+20160708185218",
         "express-serve-static-core": "registry:dt/express-serve-static-core#4.0.0+20160715232503",
         "karma": "registry:dt/karma#0.13.9+20160811111312",

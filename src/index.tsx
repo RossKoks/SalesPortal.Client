@@ -1,21 +1,17 @@
-import { createStore } from "redux";
+import {combineReducers, createStore} from "redux";
+import {userReducer} from "./user/reducers";
+import * as React from "react";
+import {render} from "react-dom";
+import {App} from "./app/app";
+import {Provider} from "react-redux";
 
-const reducer = (state: number, action : any) => {
-    if(action.type === "INC") {
-        return state + action.payload;
-    }
-    if(action.type === "DEC") {
-        return state - action.payload;
-    }
-    return state;
-};
+const reducers = combineReducers({
+    user: userReducer
+});
 
-const store  = createStore(reducer, 0);
+const store = createStore(reducers, {});
 store.subscribe(() => {
     console.log("changed", store.getState());
 });
 
-store.dispatch({type: "INC", payload: 100});
-store.dispatch({type: "INC", payload: 10});
-store.dispatch({type: "DEC", payload: 1});
-store.dispatch({type: "DEC", payload: 101});
+render(<Provider store={store}><App></App></Provider>, document.getElementById("container"));

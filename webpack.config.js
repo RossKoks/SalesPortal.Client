@@ -10,8 +10,8 @@ module.exports = {
         extensions: ["", ".webpack.js", ".web.js", ".ts", ".tsx", ".js"]
     },
     module: {
-        loaders: [{ test: /\.tsx?$/, loader: "ts-loader" }],
-        preLoader: [{ test: /\.js$/, loader: "source-map-loader" }]
+        loaders: [{test: /\.tsx?$/, loader: "ts-loader"}, {test: /\.json$/, loader: "json"}],
+        preLoader: [{test: /\.js$/, loader: "source-map-loader"}]
     },
     output: {
         path: __dirname + "/src/",
@@ -20,10 +20,6 @@ module.exports = {
     plugins: debug ? [] : [
         new webpack.optimize.DedupePlugin(),
         new webpack.optimize.OccurenceOrderPlugin(),
-        new webpack.optimize.UglifyJsPlugin({ mangle: false, sourcemap: false }),
-    ],
-    externals: {
-        "react": "React",
-        "react-dom": "ReactDOM"
-    },
-}
+        new webpack.optimize.UglifyJsPlugin({mangle: false, sourcemap: false}),
+    ]
+};

@@ -1,5 +1,5 @@
 const webapck = require("webpack");
-var webpackConfig = require('./webpack.config');
+const webpackConfig = require('./webpack.config');
 
 module.exports = (config) => {
     config.set({
@@ -14,9 +14,15 @@ module.exports = (config) => {
         },
         webpack: {
             module: webpackConfig.module,
-            resolve: webpackConfig.resolve
+            resolve: webpackConfig.resolve,
+            externals: {
+                'react/lib/ExecutionEnvironment': true,
+                'react/lib/ReactContext': true,
+                'react/addons': true,
+                "cheerio": "window",
+            }
         },
         autoWatch: true,
-        reporters: ['progress', 'html'],
+        reporters: ['progress', 'html', 'coverage'],
     });
-}
+};

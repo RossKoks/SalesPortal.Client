@@ -1,5 +1,5 @@
 const webapck = require("webpack");
-var webpackConfig = require('./webpack.config');
+const webpackConfig = require('./webpack.config');
 
 module.exports = (config) => {
     config.set({
@@ -17,6 +17,6 @@ module.exports = (config) => {
             resolve: webpackConfig.resolve
         },
         autoWatch: true,
-        reporters: ['progress', 'html'],
+        reporters: ['progress', 'html', 'coverage'],
     });
-}
+};

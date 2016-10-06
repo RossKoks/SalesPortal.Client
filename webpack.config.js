@@ -1,7 +1,7 @@
 const debug = process.env.NODE_ENV !== "production";
 const webpack = require('webpack');
 const path = require('path');
-
+const DashboardPlugin = require('webpack-dashboard/plugin');
 module.exports = {
     context: path.join(__dirname, "src"),
     devtool: debug ? "source-map" : null,
@@ -21,5 +21,6 @@ module.exports = {
         new webpack.optimize.DedupePlugin(),
         new webpack.optimize.OccurenceOrderPlugin(),
         new webpack.optimize.UglifyJsPlugin({mangle: false, sourcemap: false}),
+        new DashboardPlugin()
     ]
 };

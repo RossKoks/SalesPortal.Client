@@ -5,7 +5,7 @@
   "main": "webpack.config.js",
   "scripts": {
     "dev": "./node_modules/.bin/webpack-dev-server --content-base src --inline --hot",
-    "build": "webpack -p --config webpack.config.prod.js --progress --colors",
+    "dashboard": "webpack-dashboard -- webpack-dev-server --config ./webpack.config.js",
     "test": "./node_modules/.bin/karma start --single-run --browsers PhantomJS"
   },
   "dependencies": {

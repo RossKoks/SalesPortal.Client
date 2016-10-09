@@ -10,7 +10,7 @@
         "core-js": "registry:dt/core-js#0.0.0+20160914114559",
         "enzyme": "registry:dt/enzyme#2.4.1+20161004164857",
         "express": "registry:dt/express#4.0.0+20160708185218",
-        "express-serve-static-core": "registry:dt/express-serve-static-core#4.0.0+20160715232503",
+        "express-serve-static-core": "registry:dt/express-serve-static-core#4.0.0+20161008174359",
         "karma": "registry:dt/karma#0.13.9+20160811111312",
         "log4js": "registry:dt/log4js#0.0.0+20160608042355",
         "mime": "registry:dt/mime#0.0.0+20160316155526",

@@ -263,3 +263,4 @@ typings/
 bundle.js
 bundle.js.map
 karma_html/
+coverage/

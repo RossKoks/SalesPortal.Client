@@ -45,6 +45,7 @@
     "uglify-js": "^2.7.3",
     "webpack": "^1.13.1",
     "webpack-dashboard": "0.1.8",
+    "webpack-dev-middleware": "^1.8.4",
     "webpack-dev-server": "^1.16.1"
   },
   "repository": {
